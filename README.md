@@ -35,6 +35,7 @@ project/
 │   ├── game.py
 │   └── ai.py
 ````
+
 ### `main.py`
 - Manages game flow and user interaction.
 - Prompts user to choose a side (`X` or `O`).
@@ -91,7 +92,8 @@ Limit search depth using a heuristic evaluation? (y/n): y
 - Python 3.6+
 - No third-party libraries required (uses only the Python standard library)
 
-    ## 🧪 Sample Board Position Reference
+
+## 🧪 Sample Board Position Reference
 
 ```text
 Board positions:

@@ -23,4 +23,33 @@ def main():
     print(" 7 | 8 | 9\n")
     print("Game start!\n")
 
+    
+    # Ask if AI should use a heuristic at limited depth
+    use_heuristic = input("Limit search depth using a heuristic evaluation? (y/n): ").lower() == "y"
+
+    # Main game loop
+    while True:
+        print_board(board)
+        
+        # Check for winner or draw after each move
+        result = check_winner(board)
+        if result is not None:
+            if result == "Draw":
+                print("It's a draw!")
+            else:
+                print(f"{result} wins!")
+            break
+
+        # Determine whose turn it is
+        if current_player == human_player:
+            player_move(board, human_player)
+        else:
+            ai_move(board, ai_player, use_heuristic)
+
+        # Swap turn
+        current_player = "O" if current_player == "X" else "X"
+        print()  # Newline for better readability
+
+if __name__ == "__main__":
+    main()
   
